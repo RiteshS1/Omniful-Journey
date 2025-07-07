@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Ritesh's Portfolio</title>
+    <meta name="description" content="Portfolio dashboard showcasing projects and skills for Omniful internship">
+    <meta name="author" content="Ritesh Sharma">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" role="navigation" aria-label="Dashboard navigation">
+            <!-- <div class="sidebar-header">
+                <h1>
+                    <span class="logo-icon">R</span>
+                    <span class="logo-text">Dashboard</span>
+                </h1>
+            </div> -->
+            
+            <nav class="sidebar-nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <span class="nav-icon">←</span>
+                            <span class="nav-text">Portfolio Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#overview" class="nav-link active" aria-current="page">
+                            <span class="nav-icon">●</span>
+                            <span class="nav-text">Overview</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#projects" class="nav-link">
+                            <span class="nav-icon">□</span>
+                            <span class="nav-text">Projects</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#skills" class="nav-link">
+                            <span class="nav-icon">◆</span>
+                            <span class="nav-text">Skills</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="blog.html" class="nav-link">
+                            <span class="nav-icon">✎</span>
+                            <span class="nav-text">Blog</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="form.html" class="nav-link">
+                            <span class="nav-icon">□</span>
+                            <span class="nav-text">Form</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="profile-section">
+                    <div class="profile-avatar">RS</div>
+                    <div class="profile-info">
+                        <div class="profile-name">Ritesh Sharma</div>
+                        <div class="profile-title">Frontend Developer</div>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://github.com/RiteshS1" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                        <span class="social-icon">G</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ritesh-sharma-8477a424a/" class="social-link" aria-label="LinkedIn Profile">
+                        <span class="social-icon">L</span>
+                    </a>
+                    <a href="https://x.com/riiteshhhhh" class="social-link" aria-label="Email Contact">
+                        <span class="social-icon">@</span>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content" role="main">
+            <header class="content-header">
+                <h2>Portfolio Dashboard</h2>
+                <p class="header-subtitle">Showcasing my journey towards an Omniful PPO</p>
+            </header>
+
+            <section class="dashboard-content">
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">📊</div>
+                        <div class="stat-info">
+                            <div class="stat-number">3</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">🛠️</div>
+                        <div class="stat-info">
+                            <div class="stat-number">8</div>
+                            <div class="stat-label">Technologies Used</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">⏰</div>
+                        <div class="stat-info">
+                            <div class="stat-number">40+</div>
+                            <div class="stat-label">Hours Invested</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">🎯</div>
+                        <div class="stat-info">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Commitment Level</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Assignment Links -->
+                <div class="assignments-section" id="projects">
+                    <h3>Portfolio Projects</h3>
+                    <div class="assignments-grid">
+                        <div class="assignment-card">
+                            <div class="assignment-header">
+                                <h4>Semantic Blog</h4>
+                                <span class="status-badge completed">Completed</span>
+                            </div>
+                            <p>Proper HTML5 semantic structure with accessibility best practices and modern design.</p>
+                            <div class="assignment-actions">
+                                <a href="blog.html" class="btn btn-primary">View Project</a>
+                                <div class="assignment-tech">
+                                    <span class="tech-tag">HTML5</span>
+                                    <span class="tech-tag">CSS3</span>
+                                    <span class="tech-tag">Semantic HTML</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="assignment-card">
+                            <div class="assignment-header">
+                                <h4>Multi-Step Form</h4>
+                                <span class="status-badge completed">Completed</span>
+                            </div>
+                            <p>Accessible multi-step form with ARIA attributes and semantic HTML structure.</p>
+                            <div class="assignment-actions">
+                                <a href="form.html" class="btn btn-primary">View Project</a>
+                                <div class="assignment-tech">
+                                    <span class="tech-tag">HTML5</span>
+                                    <span class="tech-tag">CSS3</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">ARIA</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="assignment-card">
+                            <div class="assignment-header">
+                                <h4>Dashboard Layout</h4>
+                                <span class="status-badge completed">Completed</span>
+                            </div>
+                            <p>Clean dashboard layout with semantic HTML and modern minimalistic design.</p>
+                            <div class="assignment-actions">
+                                <a href="#" class="btn btn-secondary">Current Page</a>
+                                <div class="assignment-tech">
+                                    <span class="tech-tag">Layout</span>
+                                    <span class="tech-tag">CSS Grid</span>
+                                    <span class="tech-tag">Flexbox</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills Section -->
+                <div class="skills-section" id="skills">
+                    <h3>Technical Skills Demonstrated</h3>
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h4>Frontend Technologies</h4>
+                            <div class="skill-items">
+                                <span class="skill-item">HTML5</span>
+                                <span class="skill-item">CSS3</span>
+                                <span class="skill-item">JavaScript</span>
+                                <span class="skill-item">Responsive Design</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h4>Accessibility</h4>
+                            <div class="skill-items">
+                                <span class="skill-item">ARIA Attributes</span>
+                                <span class="skill-item">Keyboard Navigation</span>
+                                <span class="skill-item">Screen Reader Support</span>
+                                <span class="skill-item">Semantic HTML</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h4>Design & UX</h4>
+                            <div class="skill-items">
+                                <span class="skill-item">UI Design</span>
+                                <span class="skill-item">Typography</span>
+                                <span class="skill-item">Color Theory</span>
+                                <span class="skill-item">User Experience</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h4>Best Practices</h4>
+                            <div class="skill-items">
+                                <span class="skill-item">Code Quality</span>
+                                <span class="skill-item">Documentation</span>
+                                <span class="skill-item">Testing</span>
+                                <span class="skill-item">Version Control</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Journey Section -->
+                <div class="journey-section">
+                    <h3>My Omniful Journey</h3>
+                    <div class="journey-card">
+                        <div class="journey-content">
+                            <h4>Goal: Secure Good PPO at Omniful</h4>
+                            <p>
+                                This portfolio represents my commitment to excellence and my passion for frontend development. 
+                                Each project demonstrates not just technical skills, but attention to detail, accessibility, 
+                                and user experience. These qualities make me a strong candidate for a 
+                                Pre-Placement Offer at Omniful.
+                            </p>
+                            <div class="journey-highlights">
+                                <div class="highlight">
+                                    <span class="highlight-icon">+</span>
+                                    <span class="highlight-text">Dedicated to continuous learning</span>
+                                </div>
+                                <div class="highlight">
+                                    <span class="highlight-icon">○</span>
+                                    <span class="highlight-text">Passionate about user experience</span>
+                                </div>
+                                <div class="highlight">
+                                    <span class="highlight-icon">✓</span>
+                                    <span class="highlight-text">Committed to accessibility</span>
+                                </div>
+                                <div class="highlight">
+                                    <span class="highlight-icon">→</span>
+                                    <span class="highlight-text">Ready to contribute to team success</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="footer" role="contentinfo">
+        <p>Built with ❤️ by Ritesh Sharma</p>
+        <a href="https://github.com/RiteshS1" target="_blank" rel="noopener noreferrer" aria-label="Visit GitHub Profile">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+        </a>
+    </footer>
+</body>
+</html>
