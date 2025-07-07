@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Step Form - Ritesh's Portfolio</title>
+    <meta name="description" content="Accessible multi-step registration form with ARIA attributes and semantic HTML">
+    <meta name="author" content="Ritesh Sharma">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="form-body">
+    <header class="form-header" role="banner">
+        <nav aria-label="Form navigation">
+            <a href="index.html" class="nav-link">← Back to Portfolio</a>
+        </nav>
+        <h1>Multi-Step Registration Form</h1>
+    </header>
+
+    <main class="form-main" role="main">
+        <div class="form-container">
+            <div class="progress-bar" role="progressbar" aria-label="Form progress">
+                <div class="progress-step active" data-step="1">
+                    <div class="step-number">1</div>
+                    <div class="step-label">Personal Info</div>
+                </div>
+                <div class="progress-step" data-step="2">
+                    <div class="step-number">2</div>
+                    <div class="step-label">Contact Details</div>
+                </div>
+                <div class="progress-step" data-step="3">
+                    <div class="step-number">3</div>
+                    <div class="step-label">Preferences</div>
+                </div>
+                <div class="progress-step" data-step="4">
+                    <div class="step-number">4</div>
+                    <div class="step-label">Review</div>
+                </div>
+            </div>
+
+            <form class="multi-step-form" novalidate>
+                <!-- Step 1: Personal Information -->
+                <fieldset class="form-step active" id="step-1">
+                    <legend>Personal Information</legend>
+                    
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input 
+                            type="text" 
+                            id="firstName" 
+                            name="firstName" 
+                            aria-required="true"
+                            aria-describedby="firstName-error"
+                            required
+                        >
+                        <div id="firstName-error" class="error-message" role="alert" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input 
+                            type="text" 
+                            id="lastName" 
+                            name="lastName" 
+                            aria-required="true"
+                            aria-describedby="lastName-error"
+                            required
+                        >
+                        <div id="lastName-error" class="error-message" role="alert" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dateOfBirth">Date of Birth</label>
+                        <input 
+                            type="date" 
+                            id="dateOfBirth" 
+                            name="dateOfBirth" 
+                            aria-required="true"
+                            aria-describedby="dateOfBirth-error"
+                            required
+                        >
+                        <div id="dateOfBirth-error" class="error-message" role="alert" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <fieldset>
+                            <legend>Gender</legend>
+                            <div class="radio-group">
+                                <input type="radio" id="male" name="gender" value="male">
+                                <label for="male">Male</label>
+                            </div>
+                            <div class="radio-group">
+                                <input type="radio" id="female" name="gender" value="female">
+                                <label for="female">Female</label>
+                            </div>
+                            <div class="radio-group">
+                                <input type="radio" id="other" name="gender" value="other">
+                                <label for="other">Other</label>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-next" onclick="nextStep()">Next</button>
+                    </div>
+                </fieldset>
+
+                <!-- Step 2: Contact Details -->
+                <fieldset class="form-step" id="step-2">
+                    <legend>Contact Details</legend>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            aria-required="true"
+                            aria-describedby="email-error email-help"
+                            required
+                        >
+                        <div id="email-help" class="help-text">We'll use this to send you important updates</div>
+                        <div id="email-error" class="error-message" role="alert" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            name="phone" 
+                            aria-required="true"
+                            aria-describedby="phone-error"
+                            required
+                        >
+                        <div id="phone-error" class="error-message" role="alert" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Street Address</label>
+                        <textarea 
+                            id="address" 
+                            name="address" 
+                            rows="3"
+                            aria-required="true"
+                            aria-describedby="address-error"
+                            required
+                        ></textarea>
+                        <div id="address-error" class="error-message" role="alert" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input 
+                            type="text" 
+                            id="city" 
+                            name="city" 
+                            aria-required="true"
+                            aria-describedby="city-error"
+                            required
+                        >
+                        <div id="city-error" class="error-message" role="alert" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-prev" onclick="prevStep()">Previous</button>
+                        <button type="button" class="btn btn-next" onclick="nextStep()">Next</button>
+                    </div>
+                </fieldset>
+
+                <!-- Step 3: Preferences -->
+                <fieldset class="form-step" id="step-3">
+                    <legend>Preferences</legend>
+                    
+                    <div class="form-group">
+                        <label for="newsletter">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            Subscribe to our newsletter
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notifications">
+                            <input type="checkbox" id="notifications" name="notifications">
+                            Enable email notifications
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="theme">Preferred Theme</label>
+                        <select id="theme" name="theme" aria-describedby="theme-help">
+                            <option value="">Select a theme</option>
+                            <option value="light">Light Theme</option>
+                            <option value="dark">Dark Theme</option>
+                            <option value="auto">Auto (System)</option>
+                        </select>
+                        <div id="theme-help" class="help-text">Choose your preferred interface theme</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bio">Tell us about yourself</label>
+                        <textarea 
+                            id="bio" 
+                            name="bio" 
+                            rows="4"
+                            aria-describedby="bio-help"
+                            maxlength="500"
+                        ></textarea>
+                        <div id="bio-help" class="help-text">Maximum 500 characters</div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-prev" onclick="prevStep()">Previous</button>
+                        <button type="button" class="btn btn-next" onclick="nextStep()">Review</button>
+                    </div>
+                </fieldset>
+
+                <!-- Step 4: Review -->
+                <fieldset class="form-step" id="step-4">
+                    <legend>Review Your Information</legend>
+                    
+                    <div class="review-section">
+                        <h3>Personal Information</h3>
+                        <p>Please review your information before submitting.</p>
+                        <div class="review-content">
+                            <p><strong>Note:</strong> This is a demo form. No data will be actually submitted.</p>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-prev" onclick="prevStep()">Previous</button>
+                        <button type="submit" class="btn btn-submit">Submit Form</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </main>
+
+    <footer class="form-footer" role="contentinfo">
+        <p>&copy; 2025 Ritesh Sharma - Frontend Developer Portfolio</p>
+    </footer>
+
+    <script>
+        // Basic form navigation
+        let currentStep = 1;
+        const totalSteps = 4;
+
+        function nextStep() {
+            if (currentStep < totalSteps) {
+                document.getElementById(`step-${currentStep}`).classList.remove('active');
+                document.querySelector(`.progress-step[data-step="${currentStep}"]`).classList.remove('active');
+                currentStep++;
+                document.getElementById(`step-${currentStep}`).classList.add('active');
+                document.querySelector(`.progress-step[data-step="${currentStep}"]`).classList.add('active');
+            }
+        }
+
+        function prevStep() {
+            if (currentStep > 1) {
+                document.getElementById(`step-${currentStep}`).classList.remove('active');
+                document.querySelector(`.progress-step[data-step="${currentStep}"]`).classList.remove('active');
+                currentStep--;
+                document.getElementById(`step-${currentStep}`).classList.add('active');
+                document.querySelector(`.progress-step[data-step="${currentStep}"]`).classList.add('active');
+            }
+        }
+
+        // Form submission handler
+        document.querySelector('.multi-step-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Form submitted successfully! (This is just a demo)');
+        });
+    </script>
+
+    <footer class="footer" role="contentinfo">
+        <p>Built with ❤️ by Ritesh Sharma</p>
+        <a href="https://github.com/RiteshS1" target="_blank" rel="noopener noreferrer" aria-label="Visit GitHub Profile">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+        </a>
+    </footer>
+</body>
+</html>
